@@ -1,0 +1,951 @@
+<!doctype html>
+<html>
+<head>
+    <title>Trial 2</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+
+        html{
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            margin:0;
+            padding:0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #mainlogo img{
+            float:left;
+            height: 7rem;
+            z-index: 3;
+            padding:1rem 1rem 1.2rem 1rem;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #143D59;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        .navbar a {
+            float: right;
+            display: block;
+            color: #EFB01A;
+            text-align: center;
+            font-size: 2.6rem;
+            padding: 3.24rem 2.5rem;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background: #ffffba;
+            color: #143D59 ;
+        }
+        #seeme{
+            font-size:3.5rem;
+            animation: blinkingText;
+            animation-duration:1.3s;
+            animation-iteration-count: infinite;
+            padding-bottom: 2.675rem;
+            padding-top: 2.725rem;
+
+        }
+        @keyframes blinkingText{
+            0%{color:red;}
+            25%{color:transparent;}
+            49%{color:yellow;}
+            75%{color:transparent;}
+            100%{color:red;}
+        }
+        .header{
+            background-image: linear-gradient(to right bottom,
+                rgba(255,255,0,0.8),
+                rgba(255,255,30,0.8)), 
+                url(images/owl.jpg);
+                background-position: center;
+            height: 100vh;
+            background-size:cover;
+            position:relative;
+            z-index: 1;
+        }
+
+        .heading{
+            text-transform: uppercase;
+            position:absolute;
+            top:45%;
+            left:50%;
+            transform:translate(-50%,-50%);
+
+        }
+        #headingmain{
+            font-size: 7.5rem;
+            display: block;
+            letter-spacing: 2rem;
+            color:#143D59;
+            animation: dropAbove 1s;
+            animation-timing-function: ease-in;
+        }
+        @keyframes dropAbove{
+            0%{
+                transform:translateY(-60%);
+                color:transparent;
+            }
+            100%
+            {
+                transform:translateY(0%);
+            }
+        }
+        #headingsub{
+            font-size: 3.5rem;
+            display: block;
+            letter-spacing: 0.5rem;
+            color:#0f8b9f;
+            animation: riseAbove 1s;
+            animation-timing-function: ease-in;
+        }
+        @keyframes riseAbove{
+            0%{
+                transform:translateY(90%);
+                color:transparent;
+            }
+            100%
+            {
+                transform:translateY(0%);
+            }
+        }
+        .suprisebutton{
+            display:block;
+            position: relative;
+            z-index: 2;
+            transform: translateY(550%);
+        }
+        .suprisebutton button{
+            width:20%;
+            background-color:#143D59;
+            border-radius: 100px;
+            border-color: #143D59;
+            border-style: solid;
+            padding-top:2rem;
+            padding-bottom: 2rem;
+            font-size:4rem;
+            box-shadow: 5px 4px 8px #4f4f4f;
+            transform: translateX(195%);
+        }
+        .suprisebutton button a:link,
+        .suprisebutton button a:visited{
+            text-decoration: none;
+            color:#fdfe06;
+        }
+        .suprisebutton button:hover
+        {
+            background-color: #2bd8b0;
+            transition: all 500ms ;
+            border-color:#2bd8b0;
+            box-shadow:5px 7px 8px #4f4f4f;
+        }
+
+
+
+
+
+        .clear{
+            margin: 0;
+            clear: both;
+        }
+
+
+
+
+
+        .latest{
+            height: 90vh;
+            padding-top: 9.5rem;
+            background-color: #fff87f ;
+        }
+        .description{
+            float: right;
+        }
+        #launchhead{
+            margin:0 12rem;
+            font-size: 7rem;
+            color:#7c7c7c;
+            letter-spacing: 1.1rem;
+        }
+        #launchsub{
+            margin-left: 1rem;
+            font-size: 2rem;
+            margin-top: 0;
+            text-align:center;
+            letter-spacing:1.2rem;
+
+        }
+        #launchtxt{
+            font-size: 3rem;
+            margin-top: 10rem;
+            line-height: 4rem;
+            width:40rem;
+            margin-left: 27rem;
+            text-align:center;
+            color:#09c175;
+
+        }
+        .launchimages{
+            padding-top: 10rem;
+            
+        }
+        .launchimages img{
+            height: 24rem;
+            float:left;
+            position: absolute;
+
+        }
+        #alexa{
+            z-index: 1;
+            margin-left: 10rem;
+        }
+        #alexa:hover{
+            z-index:20;
+            height:26rem;
+            border-color: #07e589;
+            border-width: 1rem;
+            border-style: solid;
+            transition:height 200ms;
+
+        }
+        #oneplus{
+            z-index: 2;
+            transform: translate(100%,50%);
+        }
+        #oneplus:hover{
+            z-index:20;
+            height:26rem;
+            border-color: #07e589;
+            border-width: 1rem;
+            border-style: solid;
+            transition:height 300ms;
+        }
+        #louis{
+            z-index: 3;
+            transform: translate(130%,100%);
+        }
+        #louis:hover{
+            z-index:20;
+            height:26rem;
+            border-color: #07e589;
+            border-width: 1rem;
+            border-style: solid;
+            transition:height 200ms; 
+        }
+
+
+
+
+
+        .suprise{
+            height: 100vh;
+            background-color: #35ddb3;
+            margin:0 auto;
+        }
+        #suptitle{
+            display: block;
+            margin-top: 0;
+
+        }
+        #suphead{
+            margin-top: 0;
+            margin-bottom:2rem;
+            padding-top: 10rem;
+            font-size: 6rem;
+            text-transform: uppercase;
+            letter-spacing: 2rem;
+            text-align:center;
+            color:#0a7f5c;
+        }
+        #supsub{
+            font-size: 2rem;
+            text-align: center;
+            color:#EFB01A;
+
+        }
+        .discards{
+            position:absolute;
+        }
+        .card{
+            box-shadow:0 5px 8px rgba(0,0,0,0.2);
+            max-width: 300px;
+            height:34rem;
+            margin:auto 10rem;
+            background-color: #ffca18;
+            position: relative;
+            float:left;
+            border-radius: 10px;
+        }
+        .card img{
+            width: 100%;
+            height:20rem;
+            border-radius: 10px;
+        }
+        .card h4{
+            font-size: 2rem;
+            text-align: center;
+            margin:1.2rem auto;
+            text-decoration: underline;
+        }
+        .disprice{
+            color:grey;
+            font-size: 1.7rem;
+            text-align:center;
+            margin-top: 1.3rem;
+            margin-bottom: 0.5rem;
+            text-decoration: line-through;
+        }
+        .price{
+            color:crimson;
+            font-size: 2rem;
+            text-align:center;
+            margin-top: 0.4rem;
+            margin-bottom: 0.5rem;
+        }
+        .cardes{
+            margin-bottom: 0.3rem;
+            padding:0 3rem;
+            margin-top:0rem;
+            font-size:1.5rem;
+            text-align: center;
+        }
+        .card button{
+            height:0;
+            border:none;
+            outline:0;
+            padding:1.2rem;
+            background-color: #000;
+            color:lightgray;
+            text-align:center;
+            cursor:pointer;
+            width:50%;
+            font-size: 1.8rem;
+            opacity:0;
+            margin:0 7.5rem;
+            border-radius:100px;
+
+        }
+        .card:hover{
+            height:40rem;
+            transition: height 500ms;
+
+        }
+        .card:hover button{
+            opacity:1;
+            height: 4rem;
+            transition: opacity 1s ease-out;
+        }
+        .button{
+            margin:0;
+        }
+        .button a{
+            text-decoration: none;
+            color: lightgray;
+        }
+        .overlay {
+            position: fixed;
+            top: 10rem;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            width: 50%;
+            position: relative;
+            transition: all 5s ease-in-out;
+        }
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 2rem;
+        }
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+        .popup .close:hover {
+            color: #FFCA18;
+        }
+        .popup .content {
+            max-height: 65%;
+            font-size: 1.7rem;
+            overflow: auto;
+            padding-bottom: 10rem;
+            padding-left: 2rem;
+
+        }
+        .popup img{
+            position:relative;
+            float:left;
+            height:30rem;
+        }
+
+
+
+
+        .popular{
+            background-image: linear-gradient(to right bottom,
+                rgba(255,255,0,0.8),
+                rgba(255,255,150,0.8)), 
+                url(images/color.jpg);
+                background-position: center;
+            height:100vh;
+            background-size: cover;
+            
+        }
+        #poptitle h2{
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 9rem;
+            text-align: center;
+            font-size: 6rem;
+            letter-spacing: 1.3rem;
+            text-transform: uppercase;
+            color:#25908b;
+        }
+        #poptitle h3{
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top:1.2rem;
+            color:#0a7f5c;
+        }
+        .popitems{
+            position: absolute;
+
+        }
+        .popcard{
+            position:relative;
+            background-color:#b2ffed; 
+            width:20rem;
+            height:35rem;
+            border-top-right-radius: 10rem; 
+            border-top-left-radius: 10rem;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            box-shadow: 3px 5px 6px #4f4f4f;
+            margin:5rem;
+            float:left;
+        }
+        .popcard img{
+            width:20rem;
+            height:20rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 5px #4f4f4f;
+        }
+        .popcontent{
+            font-size:2rem;
+            text-align: center;
+        }
+        .avail{
+            color:#1aaf1c;
+        }
+
+
+
+
+
+        .testimon{
+            background-image: linear-gradient(to right bottom, rgba(255,255,100,0.8),rgba(255,255,200,0.8)),url(images/emoji.jpg);
+            background-size: cover;
+            background-position: center;
+            height:130vh;
+
+        }
+        .testtitle h2{
+            font-size: 6rem;
+            color: #000000;
+            letter-spacing: 1.2rem;
+            text-transform: uppercase;
+            margin:0 auto;
+            text-align: center;
+            padding-top:9rem;
+
+        }
+        .testtitle h3{
+            font-size: 2rem;
+            color:#000000;
+            text-align: center;
+            letter-spacing: 0.8rem;
+            margin-bottom: 5rem;
+            text-transform: uppercase;
+
+        }
+        .happyreview{
+            background-color:rgba(229,229,229,0.5);
+            height:20rem;
+            width:50%;
+            margin:0rem auto 4rem auto;
+            box-shadow: 5px 5px 8px #4f4f4f;
+            border-radius: 9rem;
+            position: relative;
+        }
+        .happyreview::after{
+            clear:both;
+        }
+        .pic{
+            position:relative;
+            width:15rem;
+            height: 15rem;
+            margin:0px;
+            border-radius: 7.5rem;
+
+        }
+        .happyreview img{
+            width:15rem;
+            height:15rem;
+            float: left;
+            border-radius: 50%;
+            padding:2.5rem;
+        }
+        .happyreview .fadedbox{
+            border-radius: 7.5rem;
+            background-color: #4f4f4f;
+            position: absolute;
+            top:0;
+            left: 0;
+            color:#fff;
+            opacity: 0;
+            width:15rem;
+            height: 15rem;
+            margin:2.5rem;
+            transition: opacity 300ms ease-in;
+            float:left;
+        }
+        .fadedbox:hover{
+            opacity:0.8;
+        }
+        .happyreview .name{
+            font-size:2rem;
+            text-align: center;
+            padding-top: 6rem;
+        }
+        .happyreview .testcontent{
+            font-size: 1.6rem;
+            padding-top: 6rem;
+            padding-right: 4rem;
+        }
+
+
+
+
+        .review{
+            height: 98vh;
+            background-image: linear-gradient(to right bottom, rgba(154,154,154,0.5), rgba(90,90,90,0.6)),url(images/galaxy.jpg);
+
+        }
+        .revtitle h2{
+            margin-top:0;
+            margin-bottom: 0;
+            color:#fff;
+            padding-top: 9rem;
+            font-size:8rem;
+            text-align: center;
+            letter-spacing: 2rem;
+
+        }
+        .revtitle h3{
+            color:#fff;
+            font-size: 2.4rem;
+            text-align: center;
+            letter-spacing: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+        .form{
+            width:100%;
+            padding-left:10rem;
+        }
+        input[type=text], textarea{
+            width:80%;
+            margin:3rem auto;
+            font-size: 2rem;
+            padding:1.2rem;
+            box-sizing: border-box;
+        }
+        textarea{
+            width:89%;
+        }
+        input[type=submit] {
+            background-color: #ffff49;
+            color: #313baa;
+            padding: 1.2rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            font-size:3rem;
+        }
+        .rev{
+            margin-left: 7rem;
+        }
+
+
+
+
+
+        .footer{
+            height:60vh;
+            background-color: #143D59;
+
+        }
+        .logoimg{
+            position: relative;
+            float:left;
+            padding-top: 5rem;
+            padding-left: 13rem;
+
+        }
+        .logoimg img{
+            height:34vh;
+            padding-left:4rem;
+
+
+        }
+        .logoimg h2{
+            color:#FECB18;
+            font-size:4rem;
+            text-align:center;
+            margin-bottom: 0;
+
+        }
+        .logoimg h3{
+            color: #FFFF49;
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 0.8rem;
+
+        }
+        .links{
+            padding-top:2rem;
+            padding-left: 70rem;
+
+        }
+        .links ul{
+            margin:0;
+        }
+        .links li{
+            margin:3rem;
+            list-style: none;
+        }
+        .links button{
+            width:28%;
+            background-color: #143D59;
+            height:5rem;
+            border-color:#143D59;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 70px;
+
+        }
+        .links a:link,
+        .links a:visited{
+            text-decoration: none;
+            color:#FECB18;
+            font-size:2rem;
+
+        }
+        .links button:hover{
+            background-color: #FECB18;
+            transition: all 200ms ease-out;
+        }
+        .links button:hover a
+        {
+            color:#143D59;
+        }
+
+
+
+
+
+
+
+
+        
+
+    </style>    
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div id="mainlogo">
+                <img src="images/owlfinal.jpeg" />
+            </div>
+            <a href="https://www.google.com/covid19" target="_blank" id="seeme">COVID-19</a>
+            <a href="#about">About</a>
+            <a href="#revlink">Review</a>
+            <a href="#testlink">Testimonials</a>
+            <a href="#poplink">Popular</a>
+            <a href="#suplink">SupriseMe</a>
+            <a href="#launchlink">Latest</a>
+            <a href="#home" >Home</a>
+        </div>
+    </nav>
+
+    <a name="home" />
+    <header class="header">
+        <h1 class="heading">
+            <span id="headingmain">owlp!ng</span>
+            <span id="headingsub">shopping redefined</span></h1>
+        <div class="suprisebutton"><button><a href="#suplink">SupriseMe!</a></button></div>
+    </header>
+    <a name="launchlink" />
+    <div class="clear"></div>
+
+    
+    <div class="latest">
+        <div class="description">
+            <h2 id="launchhead">Launching Soon</h2>
+            <h3 id="launchsub">Latest products coming soon</h3>
+            <p id="launchtxt">Stay tuned for latest and most anticipated products.<br />Check out the newly launched fashion and tech products. :)</p>
+        </div>
+        <div class="launchimages">
+            <img src="images/alexa1.jpg" id="alexa" />
+            <img src="images/one1.jpg" id="oneplus" />
+            <img src="images/lui.jpg" id="louis" />
+        </div>
+    </div>
+    <a name="suplink"/>
+    <div class="clear"></div>
+
+    <div class="suprise">
+        <div id="suptitle">
+            <h2 id="suphead">Suprises</h2>
+            <h3 id="supsub"><u>Heavily Discounted</u> Products specially for <strong><em>YOU</em></strong>!!</h3>
+        </div>
+        <div class="discards">
+            <div class="card">
+                <img src="images/jean.jpeg"/>
+                <h4>Levis Denim</h4>
+                <p class="disprice">Rs.2,499</p>
+                <p class="price">Rs.1,599</p>
+                <p class="cardes">Hand-crafted blue jeans,100% cotton, from the one and only Levis</p>
+                <p class="button"><button><a href="#popup1">Know More</a></button></p>
+            </div>
+            
+            <div class="card">
+                <img src="images/macbook.jpeg"/>
+                <h4>Apple Macbook</h4>
+                <p class="disprice">Rs.98,499</p>
+                <p class="price">Rs.94,999</p>
+                <p class="cardes">The latest all cool and stylish version of the iconic Macbook</p>
+                <p class="button"><button><a href="#popup2">Know More</a></button></p>
+            </div>
+            
+            <div class="card">
+                <img src="images/drink.jpeg"/>
+                <h4>Coca Cola</h4>
+                <p class="disprice">Rs.64</p>
+                <p class="price">Rs.48</p>
+                <p class="cardes">Beat the summer heat with a icy cool Coke</p>
+                <p class="button"><button><a href="#popup3">Know More</a></button></p>
+            </div>
+
+            <div class="clear"></div>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Levis Jeans</h2>
+                    <a class="close" href="#suplink">&times;</a>
+                    <img src="images/jean.jpeg" />
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <p class="disprice">Rs.2,499</p>
+                        <p class="price">Rs.1,599</p>
+                        <p>*Offer expiring in <u>2</u> hours!!<br/>**Valid only upto <em>7</em> pieces only</p>
+                    </div>
+
+                </div>
+            </div>
+            <div id="popup2" class="overlay">
+                <div class="popup">
+                    <h2>Apple Macbook</h2>
+                    <a class="close" href="#suplink">&times;</a>
+                    <img src="images/macbook.jpeg" />
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <p class="disprice">Rs.98,499</p>
+                        <p class="price">Rs.94,999</p>
+                        <p>*Offer expiring in <u>2</u> hours!!<br/>**Valid only upto <em>7</em> pieces only</p>
+                    </div>
+
+                </div>
+            </div>
+            <div id="popup3" class="overlay">
+                <div class="popup">
+                    <h2>Coca Cola</h2>
+                    <a class="close" href="#suplink">&times;</a>
+                    <img src="images/drink.jpeg" />
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <p class="disprice">Rs.64</p>
+                        <p class="price">Rs.48</p>
+                        <p>*Offer expiring in <u>2</u> hours!!<br/>**Valid only upto <em>7</em> pieces only</p>
+                    </div>
+
+                </div>
+            </div>    
+        </div>
+    </div>
+    <a name="poplink"/>
+    <div class="clear"></div>
+
+    <div class="popular">
+        <div id="poptitle">
+            <h2>Popular</h2>
+            <h3>Check out this week's most bought products here!!</h3>
+        </div>
+        <div class="popitems">
+            <div class="popcard">
+                <img src="images/soap.jpeg"/>
+                <div class="popcontent">
+                    <p>Dettol Soap</p>
+                    <p class="avail">**IN STOCK</p>
+                    <p>48,000+ orders</p>
+                </div>
+            </div>
+            <div class="popcard">
+                <img src="images/mask.jpeg"/>
+                <div class="popcontent">
+                    <p>N95 Mask</p>
+                    <p class="avail">**IN STOCK</p>
+                    <p>28,000+ orders</p>
+                </div>
+            </div>
+            <div class="popcard">
+                <img src="images/sanitiser.jpeg"/>
+                <div class="popcontent">
+                    <p>BN Sanitiser</p>
+                    <p class="avail">**IN STOCK</p>
+                    <p>12,000+ orders</p>
+                </div>
+            </div>
+            <div class="popcard">
+                <img src="images/antiseptic.jpeg"/>
+                <div class="popcontent">
+                    <p>PNG Antiseptic</p>
+                    <p class="avail">**IN STOCK</p>
+                    <p>8,000+ orders</p>
+                </div>
+            </div>
+            <div class="popcard">
+                <img src="images/choco.jpeg"/>
+                <div class="popcontent">
+                    <p>Ferrero Rocher</p>
+                    <p class="avail">**IN STOCK</p>
+                    <p>1,000+ orders</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+ <a name="testlink"/>
+    <div class="testimon">
+
+
+        <div class="testtitle">
+            <h2>Testimonials</h2>
+            <h3>Yes, we satisfy and that's what they said ;)</h3>
+        </div>
+        <div class="happyreview">
+                <img src="images/cheetah.jpg"/>
+                <div class="fadedbox">
+                    <div class="name">E.Maron</div>
+                </div>  
+            <div class="testcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+        <div class="happyreview">
+                <img src="images/chicago.jpg"/>
+                <div class="fadedbox">
+                    <div class="name">S.Vernet</div>
+                </div>  
+            <div class="testcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+        <div class="happyreview">
+                <img src="images/galaxy.jpg"/>
+                <div class="fadedbox">
+                    <div class="name">R.David</div>
+                </div>  
+            <div class="testcontent">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+    </div>
+    
+    <div  class="clear"></div>
+
+    <div class="review">
+        <a name="revlink" />
+        <div class="revtitle">
+            <h2>Review</h2>
+            <h3>Got a Problem? Tell us about it!</h3>
+        </div>
+        <div class="rev">
+            <form action="">
+                <label for="fname" style="font-size: 3rem; color:#ffff49;">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
+                <br/>
+                <label for="lname" style="font-size: 3rem; color:#ffff49;">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
+                <br/>
+                <label for="revarea" style="font-size: 3rem; color:#ffff49;">Review</label>
+                <br id="subject"/>
+                <textarea id="revarea" name="revarea" placeholder="Write a review.." style="height:100px"></textarea>
+                <br>
+                <div id="subbut"><input type="submit" value="Submit"/></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="footer">
+        <div class="logoimg">
+            <img src="images/owlfinal.jpeg"/>
+            <h2>OWLP!NG.com</h2>
+            <h3>SHOPPING REDEFINED</h3>
+        </div>
+        <div class="links">
+            <ul>
+                <li><button><a href="#">About Us</a></button></li>
+                <li><button><a href="#">Privacy Policy</a></button></li>
+                <li><button><a href="#">Join Us</a></button></li>
+                <li><button><a href="#">Explore</a></button></li>
+                <li><button><a href="#">Terms & Conditions</a></button></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
